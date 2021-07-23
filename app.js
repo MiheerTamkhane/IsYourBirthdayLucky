@@ -1,6 +1,7 @@
 const date = document.getElementById("date");
 const button = document.getElementById("submit");
 const lNumber = document.getElementById("number");
+const output = document.getElementById("output");
 
 function clickHandler() {
   const userDate = date.value.split("-");
@@ -17,8 +18,11 @@ function clickHandler() {
 
   if (luck % number === 0) {
     console.log("Your Birthdate is lucky");
+    output.innerHTML = "Your Birthdate is lucky";
   } else {
     console.log("Your Birthdate is not Lucky");
+    output.innerHTML = "Your Birthdate is not Lucky";
   }
 }
+
 button.addEventListener("click", clickHandler);
