@@ -30,12 +30,12 @@ function clickHandler() {
     }
   } else if (luck % number === 0) {
     output.innerHTML = `<p class="img-para">Fantasico! Your Birthdate is Lucky ;)</p>
-    <img class="svg" src="images/luckyBirthday.svg" />`;
+    <img id="img" class="svg" src="images/luckyBirthday.svg" />`;
     error2.innerText = "";
   } else {
     output.innerHTML = `
     <p class="img-para">OOPS! Your Birthdate is not Lucky ;(</p>
-    <img class="svg" src="images/unlucky.svg" />`;
+    <img id="img" class="svg" src="images/unlucky.svg" />`;
     error2.innerText = "";
   }
 }

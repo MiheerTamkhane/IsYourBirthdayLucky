@@ -4,6 +4,9 @@
   padding: 0%;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   /* height: 100vh; */
   background-image: url("images/main.jpg");
@@ -134,8 +137,8 @@ li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1rem;
-  padding: 1rem 2rem;
+  padding-bottom: 2rem;
+  /* padding: 1rem 2rem; */
   /* margin: 2rem ; */
   border-top: 2px #055052 solid;
 }
@@ -159,9 +162,10 @@ li a {
   border-radius: 1rem;
 }
 .svg {
-  width: 300px;
+  width: 290px;
   text-align: center;
   padding: 1rem 1rem 1rem 0.1rem;
+  margin: 1rem;
 }
 .img-para {
   color: #055052;
