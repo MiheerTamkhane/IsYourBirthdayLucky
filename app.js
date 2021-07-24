@@ -23,8 +23,14 @@ function clickHandler() {
 
   if (date.value === "") {
     error1.innerText = "Please enter valid date";
-  } else if (number === "" || number < 0) {
+    if (number !== "" || number > 0) {
+      error2.innerText = "";
+    }
+  } else if (number === "" || number <= 0) {
     error2.innerText = "Please enter valid number";
+    if (date.value !== "" || number !== "" || number > 0 || number === "") {
+      error1.innerText = "";
+    }
   } else if (luck % number === 0) {
     output.innerHTML = `<p class="img-para">Fantasico! Your Birthdate is Lucky ;)</p>
     <img class="svg" src="images/luckyBirthday.svg" />`;
