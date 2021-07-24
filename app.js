@@ -5,7 +5,8 @@ const output = document.getElementById("output");
 const cancelBtn = document.getElementById("cancel-btn");
 const privacy = document.getElementById("privacy-notice");
 const footerPrivacy = document.getElementById("footer-privacy");
-
+const error1 = document.getElementById("error1");
+const error2 = document.getElementById("error2");
 //Submit btn click handler for checking lucky birthdate
 function clickHandler() {
   const userDate = date.value.split("-");
@@ -20,21 +21,17 @@ function clickHandler() {
   const luck = year + month + day;
   const number = lNumber.value;
 
-  if (year !== number) {
-    alert("please enter date");
-  } else if (number === "") {
-    alert("please fill lucky number");
+  if (date.value === "") {
+    error1.innerText = "Please enter valid date";
+  } else if (number === "" || number < 0) {
+    error2.innerText = "Please enter valid number";
   } else if (luck % number === 0) {
-    console.log("Your Birthdate is lucky");
-    output.innerHTML = "./lucky.html";
+    output.innerHTML = `<p class="img-para">Fantasico! Your Birthdate is Lucky ;)</p>
+    <img class="svg" src="images/luckyBirthday.svg" />`;
   } else {
-    console.log("Your Birthdate is not Lucky");
-    output.innerHTML = `<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat deserunt
-    sequi tempora sapiente exercitationem non excepturi, assumenda, accusamus
-    qui sunt quam quo ullam id impedit rerum nobis esse a reiciendis est
-    libero doloribus nulla.
-  </p>`;
+    output.innerHTML = `
+    <p class="img-para">OOPS! Your Birthdate is not Lucky ;(</p>
+    <img class="svg" src="images/unlucky.svg" />`;
   }
 }
 //function for showing privacy notice
