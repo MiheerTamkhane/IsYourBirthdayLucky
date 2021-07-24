@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Sora&display=swap");
 * {
   margin: 0%;
   padding: 0%;
@@ -6,26 +7,40 @@
 body {
   /* height: 100vh; */
   background-image: url("images/main.jpg");
-  color: rgb(80, 80, 80);
+  color: #055052;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 h1 {
   font-size: 3rem;
+  font-family: "Sora", sans-serif;
+  padding: 1rem;
 }
 h2 {
-  /* padding: 1rem; */
+  padding: 0.5rem;
+  font-family: "Sora", sans-serif;
 }
 label {
   padding-top: 30px;
   padding-bottom: 10px;
   font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
 }
 input {
   font-size: 1rem;
   width: 200px;
-  padding: 0.7rem;
+  padding: 0.5rem;
   border: none;
   outline: none;
   border-radius: 10px;
+  font-family: "Sora", sans-serif;
+  color: #055052;
+  background-color: #f8f8f8;
 }
 ul {
   display: flex;
@@ -39,43 +54,79 @@ li {
   font-size: 1.6rem;
   cursor: pointer;
 }
+li a {
+  text-decoration: none;
+  list-style: none;
+}
 .submit-btn {
   width: 200px;
   padding: 1rem;
   margin: 30px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border: none;
   outline: none;
   border-radius: 10px;
+  color: rgb(230, 230, 230);
+  background-color: #055052;
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.submit-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  color: white;
 }
 .privacy-notice {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #cf0000;
+  margin: 5px 4rem;
+  font-size: 18px;
+  font-family: "Sora", sans-serif;
 }
 .cancel-btn {
   font-size: 1rem;
   padding: 5px;
   margin: 5px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #cf0000;
+  color: white;
+  cursor: pointer;
 }
 .main {
   display: flex;
+  width: 65%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background: rgba(0, 151, 19, 0.1);
+  /* margin: 0rem 5rem; */
+  margin-top: 2rem;
+  padding: 1.5rem 0.3rem;
+  /* height: 80vh; */
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
 }
 .section {
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background: rgba(0, 151, 19, 0.1);
+  margin: 0rem 4rem;
+  height: 75vh;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
 .footer {
@@ -84,4 +135,19 @@ li {
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
+  padding: 1rem 2rem;
+  margin: 2rem;
+  border-top: 2px #055052 solid;
+}
+.footer-tags {
+  /* text-decoration: none; */
+  color: #055052;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+}
+.footer-icons {
+  color: #055052;
+  font-family: "Inter", sans-serif;
+  font-size: 1.7rem;
+  padding: 0rem 0.5rem;
 }
