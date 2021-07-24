@@ -23,9 +23,6 @@ function clickHandler() {
 
   if (date.value === "") {
     error1.innerText = "Please enter valid date";
-    if (number !== "" || number > 0) {
-      error2.innerText = "";
-    }
   } else if (number === "" || number <= 0) {
     error2.innerText = "Please enter valid number";
     if (date.value !== "" || number !== "" || number > 0 || number === "") {
@@ -34,10 +31,12 @@ function clickHandler() {
   } else if (luck % number === 0) {
     output.innerHTML = `<p class="img-para">Fantasico! Your Birthdate is Lucky ;)</p>
     <img class="svg" src="images/luckyBirthday.svg" />`;
+    error2.innerText = "";
   } else {
     output.innerHTML = `
     <p class="img-para">OOPS! Your Birthdate is not Lucky ;(</p>
     <img class="svg" src="images/unlucky.svg" />`;
+    error2.innerText = "";
   }
 }
 //function for showing privacy notice
